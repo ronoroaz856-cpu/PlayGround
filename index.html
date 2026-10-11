@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PlayGround — Static Preview Ready</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 64px; }
+  .badge { display: inline-block; padding: 6px 12px; border-radius: 999px; background: #22c55e; color: #052e16; font-weight: 700; font-size: 13px; }
+  h1 { font-size: 44px; line-height: 1.05; margin: 18px 0 12px; }
+  p { font-size: 18px; line-height: 1.6; color: #cbd5e1; }
+  .card { margin-top: 28px; background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px; }
+  .tile { background: #0b1220; border: 1px solid #334155; border-radius: 12px; padding: 16px; }
+  .tile strong { display: block; margin-bottom: 6px; }
+  button { margin-top: 20px; padding: 12px 20px; font-size: 16px; font-weight: 700; border-radius: 10px; border: 0; background: #38bdf8; color: #082f49; cursor: pointer; }
+  footer { margin-top: 36px; color: #64748b; font-size: 14px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+<span class="badge">PREVIEW READY</span>
+<h1>PlayGround is serving a static build</h1>
+<p>This minimal page proves local startup, public tunnel readiness, and desktop plus mobile screenshot capture. Source lives in the project directory and the served output lives in <code>dist/</code>.</p>
+<div class="card">
+<strong>Startup checks</strong>
+<div class="grid">
+<div class="tile"><strong>Local server</strong><span>Serves <code>dist/index.html</code> on <code>PORT</code> (default 3000).</span></div>
+<div class="tile"><strong>Deployment output</strong><span>Writes <code>deployment-output.json</code> with project and directory.</span></div>
+<div class="tile"><strong>Capture</strong><span>Renders this content for desktop and mobile screenshots.</span></div>
+</div>
+<button type="button" id="ready">Start</button>
+</div>
+<footer>Built output: dist/index.html &bull; No backend required</footer>
+</main>
+<script>
+document.getElementById('ready').addEventListener('click', function () {
+  this.textContent = 'Ready ✓';
+});
+</script>
+</body>
+</html>
